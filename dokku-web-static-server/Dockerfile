@@ -1,4 +1,4 @@
-FROM python:alpine
-WORKDIR /app
-ADD . /app
-CMD [ "python", "-m", "http.server", "5000"]
+FROM zzrot/alpine-caddy
+COPY Caddyfile /etc/Caddyfile
+COPY . /var/www/html
+
